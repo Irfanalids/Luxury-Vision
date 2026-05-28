@@ -7,7 +7,9 @@ export default function Home() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(8,8,12,0.58), rgba(8,8,12,0.58)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
+            "linear-gradient(90deg, rgba(3,3,8,0.82) 0%, rgba(10,10,18,0.60) 35%, rgba(15,12,20,0.52) 100%), linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.42)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
+          backgroundPosition: "center center",
+          filter: "brightness(0.78) contrast(1.08)",
         }}
       />
 
@@ -104,6 +106,7 @@ export default function Home() {
           ☏
         </div>
       </div>
+
     </main>
   );
 }
