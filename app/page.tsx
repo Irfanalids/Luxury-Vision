@@ -1,112 +1,182 @@
+```tsx
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black">
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
 
       {/* BACKGROUND */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(90deg, rgba(3,3,8,0.82) 0%, rgba(10,10,18,0.60) 35%, rgba(15,12,20,0.52) 100%), linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.42)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
-          backgroundPosition: "center center",
-          filter: "brightness(0.78) contrast(1.08)",
-        }}
-      />
+      <div className="absolute inset-0 overflow-hidden">
+
+        <div
+          className="absolute inset-0 bg-cover bg-center scale-[1.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(
+                90deg,
+                rgba(7,8,15,0.58) 0%,
+                rgba(10,12,20,0.42) 38%,
+                rgba(18,20,30,0.20) 100%
+              ),
+              linear-gradient(
+                to top,
+                rgba(0,0,0,0.38),
+                rgba(0,0,0,0.10)
+              ),
+              url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')
+            `,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            filter: "brightness(1.03) contrast(1.05) saturate(1.08)",
+          }}
+        />
+
+        {/* PURPLE/BLUE LUXURY TINT */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(40,32,60,0.18) 0%, rgba(18,22,38,0.05) 45%, rgba(0,0,0,0) 100%)",
+          }}
+        />
+
+      </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex min-h-screen flex-col px-8 pt-12 pb-10 md:px-16 backdrop-blur-[0.3px]">
 
         {/* LOGO */}
-        <div className="pt-16 px-9 md:px-14">
+        <div className="mb-[140px]">
           <h1
-            className="text-[22px] md:text-[28px] tracking-[5px] font-light uppercase text-white"
+            className="uppercase tracking-[0.22em] text-[34px] md:text-[40px]"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "Cormorant Garamond, serif",
+              fontWeight: 500,
             }}
           >
-            LUXURY <span className="text-[#c9a84c]">VISION</span>
+            <span className="text-white">LUXURY </span>
+            <span className="text-[#caa84c]">VISION</span>
           </h1>
 
-          <p className="text-[9px] tracking-[7px] mt-2 text-white/70 uppercase">
+          <p
+            className="mt-2 uppercase tracking-[0.45em] text-[11px] text-white/70"
+          >
             REAL ESTATE
           </p>
         </div>
 
-        {/* HERO */}
-        <div className="flex-1 flex items-center">
+        {/* HERO CONTENT */}
+        <div className="max-w-[620px]">
 
-          <div className="w-full max-w-[620px] px-9 md:px-14 pb-16">
+          {/* LABEL */}
+          <div
+            className="mb-10 inline-flex items-center border border-[#caa84c]/50 bg-[#8a7440]/18 px-8 py-5"
+          >
+            <span className="mr-4 text-[#caa84c] text-[12px]">•</span>
 
-            {/* LABEL */}
-            <div className="border border-[#c9a84c]/45 bg-[#c9a84c]/08 px-6 py-4 inline-block mb-10">
-              <p className="text-[#c9a84c] tracking-[4px] text-[10px] md:text-[11px] uppercase">
-                • Dubai's Premier Real Estate Agency
-              </p>
-            </div>
-
-            {/* TITLE */}
-            <h2
-              className="
-                text-[36px]
-                md:text-[59px]
-                leading-[0.95]
-                tracking-[-1.5px]
-                font-light
-                text-white
-                mb-8
-              "
+            <span
+              className="uppercase tracking-[0.35em] text-[#d7bb69]"
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
+                fontSize: "12px",
+                fontWeight: 600,
               }}
             >
-              Find Your{" "}
-              <span className="italic text-[#c9a84c]">
-                Dream
-              </span>
-              <br />
-              Property in Dubai
-            </h2>
+              Dubai's Premier Real Estate Agency
+            </span>
+          </div>
 
-            {/* DESCRIPTION */}
-            <p className="text-[17px] leading-[1.9] text-white/82 max-w-[540px]">
-              Helping you navigate Dubai’s most exclusive properties —
-              from off-plan investments to luxury villas across Sheikh
-              Zayed Road and beyond.
-            </p>
+          {/* TITLE */}
+          <h2
+            className="leading-[0.95] tracking-[-0.03em] text-white"
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontWeight: 500,
+              fontSize: "clamp(58px, 7vw, 96px)",
+              marginBottom: "34px",
+            }}
+          >
+            Find Your{" "}
+            <span className="italic text-[#caa84c]">
+              Dream
+            </span>
+            <br />
+            Property in Dubai
+          </h2>
 
-            {/* BUTTONS */}
-            <div className="flex flex-col gap-5 mt-12 max-w-[380px]">
+          {/* DESCRIPTION */}
+          <p
+            className="max-w-[640px] text-white/88 leading-[1.8]"
+            style={{
+              fontSize: "clamp(19px, 1.4vw, 24px)",
+              marginBottom: "52px",
+              fontWeight: 400,
+            }}
+          >
+            Helping you navigate Dubai’s most exclusive properties —
+            from off-plan investments to luxury villas across Sheikh
+            Zayed Road and beyond.
+          </p>
 
-              <button className="bg-[#c9a84c] text-black py-5 tracking-[4px] text-[12px] font-semibold uppercase">
-                View Properties
-              </button>
+          {/* BUTTONS */}
+          <div className="flex flex-col gap-5 sm:flex-row">
 
-              <button className="border border-white/25 bg-black/15 backdrop-blur-sm text-white py-5 tracking-[4px] text-[12px] font-semibold uppercase">
-                Book Consultation
-              </button>
+            <button
+              className="h-[74px] w-[290px] uppercase tracking-[0.32em]"
+              style={{
+                background: "#d4b24d",
+                color: "#111",
+                fontSize: "13px",
+                fontWeight: 700,
+              }}
+            >
+              VIEW PROPERTIES
+            </button>
 
-            </div>
-
-            {/* SCROLL */}
-            <div className="flex items-center gap-4 mt-16">
-              <div className="w-12 h-[1px] bg-[#c9a84c]" />
-
-              <p className="tracking-[5px] text-[10px] uppercase text-white/65">
-                Scroll to Explore
-              </p>
-            </div>
+            <button
+              className="h-[74px] w-[290px] border border-white/25 uppercase tracking-[0.32em] backdrop-blur-md"
+              style={{
+                background: "rgba(10,10,18,0.26)",
+                color: "#fff",
+                fontSize: "13px",
+                fontWeight: 700,
+              }}
+            >
+              BOOK CONSULTATION
+            </button>
 
           </div>
-        </div>
-      </div>
 
-      {/* WHATSAPP */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <div className="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white text-3xl shadow-2xl">
-          ☏
-        </div>
-      </div>
+          {/* SCROLL */}
+          <div className="mt-20 flex items-center gap-5">
 
+            <div className="h-[2px] w-[44px] bg-[#d4b24d]" />
+
+            <span
+              className="uppercase text-white/80 tracking-[0.35em]"
+              style={{
+                fontSize: "11px",
+              }}
+            >
+              Scroll To Explore
+            </span>
+
+          </div>
+
+        </div>
+
+        {/* WHATSAPP */}
+        <div className="fixed bottom-8 right-8 z-50">
+          <div
+            className="flex h-[74px] w-[74px] items-center justify-center rounded-full"
+            style={{
+              background: "#25D366",
+              boxShadow: "0 0 35px rgba(37,211,102,0.5)",
+            }}
+          >
+            <span className="text-[34px] text-white">☎</span>
+          </div>
+        </div>
+
+      </div>
     </main>
   );
 }
+```
