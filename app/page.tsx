@@ -1,221 +1,100 @@
-```tsx
 export default function Home() {
   return (
     <main
-      className="min-h-screen bg-cover bg-center text-white"
+      className="min-h-screen relative overflow-hidden"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
+          "linear-gradient(rgba(3,7,18,0.78), rgba(3,7,18,0.78)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <div
-        className="min-h-screen flex flex-col"
-        style={{
-          background:
-            "linear-gradient(rgba(5,10,20,0.68), rgba(5,10,20,0.68))",
-        }}
-      >
-        {/* HEADER */}
-        <header className="px-8 pt-7">
-          <div className="leading-none">
+      {/* NAVBAR */}
+      <nav className="absolute top-0 left-0 w-full z-20 px-14 pt-10">
+        <div className="flex items-center">
+          <div>
             <h1
+              className="text-[20px] tracking-[4px] font-semibold leading-none"
               style={{
-                fontSize: "24px",
-                letterSpacing: "2px",
-                fontFamily: "Georgia, serif",
-                fontWeight: 600,
-                color: "#ffffff",
+                fontFamily: "'Cormorant Garamond', serif",
               }}
             >
-              LUXURY{" "}
-              <span style={{ color: "#c8a24c" }}>
-                VISION
-              </span>
+              <span className="text-white">LUXURY </span>
+              <span className="text-[#c9a84c]">VISION</span>
             </h1>
 
-            <p
-              style={{
-                fontSize: "8px",
-                letterSpacing: "5px",
-                marginTop: "10px",
-                color: "rgba(255,255,255,0.85)",
-                fontFamily: "Arial, sans-serif",
-              }}
-            >
+            <p className="text-[10px] tracking-[6px] text-white/70 mt-2">
               REAL ESTATE
             </p>
           </div>
-        </header>
+        </div>
+      </nav>
 
-        {/* HERO SECTION */}
-        <section className="flex-1 flex items-center">
-          <div
-            style={{
-              paddingLeft: "64px",
-              marginTop: "-20px",
-              width: "100%",
-              maxWidth: "760px",
-            }}
-          >
-            {/* TOP LABEL */}
-            <div
-              style={{
-                border: "1px solid rgba(200,162,76,0.55)",
-                padding: "14px 26px",
-                width: "fit-content",
-                marginBottom: "44px",
-              }}
-            >
-              <p
-                style={{
-                  color: "#c8a24c",
-                  fontSize: "11px",
-                  letterSpacing: "4px",
-                  fontWeight: 600,
-                  fontFamily: "Arial, sans-serif",
-                }}
-              >
-                • DUBAI'S PREMIER REAL ESTATE AGENCY
-              </p>
-            </div>
-
-            {/* TITLE */}
-            <h2
-              style={{
-                fontSize: "58px",
-                lineHeight: "1.08",
-                maxWidth: "560px",
-                fontFamily: "Georgia, serif",
-                fontWeight: 500,
-                color: "#ffffff",
-              }}
-            >
-              Find Your{" "}
-              <span
-                style={{
-                  color: "#c8a24c",
-                  fontStyle: "italic",
-                }}
-              >
-                Dream
-              </span>
-              <br />
-              Property in Dubai
-            </h2>
-
-            {/* DESCRIPTION */}
-            <p
-              style={{
-                marginTop: "34px",
-                fontSize: "16px",
-                lineHeight: "2",
-                color: "rgba(255,255,255,0.9)",
-                maxWidth: "610px",
-                fontFamily: "Arial, sans-serif",
-              }}
-            >
-              Helping you navigate Dubai's most exclusive properties — from
-              off-plan investments to luxury villas across Sheikh Zayed Road
-              and beyond.
+      {/* HERO CONTENT */}
+      <section className="relative z-10 flex items-center min-h-screen px-14">
+        <div className="max-w-[720px] mt-16">
+          {/* BADGE */}
+          <div className="border border-[#c9a84c]/50 w-fit px-6 py-3 mb-8">
+            <p className="text-[#d8bb6c] tracking-[4px] text-[11px] font-medium">
+              • DUBAI'S PREMIER REAL ESTATE AGENCY
             </p>
-
-            {/* BUTTONS */}
-            <div
-              style={{
-                display: "flex",
-                gap: "18px",
-                marginTop: "42px",
-              }}
-            >
-              <button
-                style={{
-                  background: "#d8b547",
-                  color: "#000",
-                  padding: "16px 42px",
-                  fontSize: "12px",
-                  letterSpacing: "3px",
-                  fontWeight: 700,
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                VIEW PROPERTIES
-              </button>
-
-              <button
-                style={{
-                  border: "1px solid rgba(255,255,255,0.5)",
-                  color: "#fff",
-                  background: "transparent",
-                  padding: "16px 42px",
-                  fontSize: "12px",
-                  letterSpacing: "3px",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                }}
-              >
-                BOOK CONSULTATION
-              </button>
-            </div>
-
-            {/* BOTTOM TEXT */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "16px",
-                marginTop: "64px",
-              }}
-            >
-              <div
-                style={{
-                  width: "44px",
-                  height: "1px",
-                  background: "#c8a24c",
-                }}
-              />
-
-              <p
-                style={{
-                  fontSize: "10px",
-                  letterSpacing: "4px",
-                  color: "rgba(255,255,255,0.75)",
-                  fontFamily: "Arial, sans-serif",
-                }}
-              >
-                SCROLL TO EXPLORE
-              </p>
-            </div>
           </div>
-        </section>
 
-        {/* WHATSAPP */}
-        <div
-          style={{
-            position: "fixed",
-            bottom: "30px",
-            right: "30px",
-          }}
-        >
-          <div
+          {/* HEADING */}
+          <h2
+            className="
+              text-[58.9px]
+              leading-[1.05]
+              tracking-[-1px]
+              font-normal
+              text-white
+              mb-6
+              max-w-[520px]
+            "
             style={{
-              width: "58px",
-              height: "58px",
-              borderRadius: "999px",
-              background: "#25D366",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#fff",
-              fontSize: "26px",
-              boxShadow: "0 0 30px rgba(37,211,102,0.45)",
+              fontFamily: "'Cormorant Garamond', serif",
             }}
           >
-            ✆
+            Find Your{" "}
+            <span className="italic text-[#c9a84c]">Dream</span>
+            <br />
+            Property in Dubai
+          </h2>
+
+          {/* DESCRIPTION */}
+          <p className="text-white/82 text-[18px] leading-[1.8] max-w-[640px] mb-10 font-light">
+            Helping you navigate Dubai’s most exclusive properties — from
+            off-plan investments to luxury villas across Sheikh Zayed Road and
+            beyond.
+          </p>
+
+          {/* BUTTONS */}
+          <div className="flex gap-5 items-center">
+            <button className="bg-[#c9a84c] hover:bg-[#d4b15a] transition-all duration-300 text-black px-12 py-5 tracking-[3px] text-[12px] font-semibold">
+              VIEW PROPERTIES
+            </button>
+
+            <button className="border border-white/35 bg-black/10 backdrop-blur-sm text-white px-12 py-5 tracking-[3px] text-[12px] font-semibold">
+              BOOK CONSULTATION
+            </button>
           </div>
+
+          {/* SCROLL */}
+          <div className="flex items-center gap-4 mt-24">
+            <div className="w-10 h-[1px] bg-[#c9a84c]" />
+            <p className="text-white/70 tracking-[4px] text-[10px]">
+              SCROLL TO EXPLORE
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHATSAPP */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <div className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white text-2xl shadow-2xl">
+          ✆
         </div>
       </div>
     </main>
   );
 }
-```
