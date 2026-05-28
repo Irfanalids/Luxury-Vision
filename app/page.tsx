@@ -1,69 +1,78 @@
-```tsx
 export default function Home() {
   return (
     <main
-      className="min-h-screen bg-cover bg-center text-white"
+      className="h-screen bg-cover bg-center text-white overflow-hidden"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1974&auto=format&fit=crop')",
+          "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
       }}
     >
-      <div className="min-h-screen bg-black/75 flex flex-col justify-between">
+      <div className="h-screen bg-black/55">
 
-        {/* Navbar */}
-        <header className="flex justify-between items-center px-6 md:px-12 py-8">
-          <div>
-            <h1 className="text-3xl md:text-4xl tracking-[8px] font-light">
-              LUXURY{" "}
-              <span className="text-[#c8a24c]">
-                VISION
-              </span>
-            </h1>
+        {/* LOGO */}
+        <header className="pt-10 pl-7">
+          <h1 className="uppercase tracking-[3px] text-[22px] leading-none font-semibold">
+            <span className="text-white">LUXURY </span>
+            <span className="text-[#c8a24c]">VISION</span>
+          </h1>
 
-            <p className="text-[10px] md:text-xs tracking-[6px] text-gray-300 mt-2">
-              REAL ESTATE
-            </p>
-          </div>
+          <p className="uppercase tracking-[5px] text-[8px] text-gray-300 mt-2">
+            Real Estate
+          </p>
         </header>
 
-        {/* Hero Section */}
-        <section className="px-6 md:px-16 pb-20 md:pb-28 max-w-xl">
+        {/* HERO */}
+        <section className="pl-7 pt-32 max-w-[650px]">
 
-          {/* Top Badge */}
-          <div className="border border-[#c8a24c]/40 bg-black/20 backdrop-blur-sm px-5 py-4 inline-block mb-10">
-            <p className="text-[#c8a24c] tracking-[5px] text-xs md:text-sm uppercase">
-              Dubai’s Premier Real Estate Agency
+          {/* TOP LABEL */}
+          <div className="border border-[#c8a24c]/50 inline-block px-5 py-3 mb-10">
+            <p className="uppercase tracking-[4px] text-[10px] text-[#c8a24c] font-semibold">
+              • Dubai's Premier Real Estate Agency
             </p>
           </div>
 
-          {/* Heading */}
-          <h2 className="text-5xl md:text-7xl leading-tight font-light mb-8">
-            Find Your{" "}
-            <span className="text-[#c8a24c] italic">
+          {/* TITLE */}
+          <h2 className="text-[64px] leading-[1.05] font-light mb-6">
+            <span className="text-white">Find Your </span>
+
+            <span className="italic text-[#c8a24c]">
               Dream
             </span>
+
             <br />
-            Property in Dubai
+
+            <span className="text-white">
+              Property in Dubai
+            </span>
           </h2>
 
-          {/* Description */}
-          <p className="text-gray-300 text-lg md:text-xl leading-9 mb-12">
-            Helping you navigate Dubai’s most exclusive
-            properties — from off-plan investments to
-            luxury villas across Sheikh Zayed Road and beyond.
+          {/* DESCRIPTION */}
+          <p className="text-[18px] leading-[2] text-gray-200 max-w-[620px] mb-10">
+            Helping you navigate Dubai's most exclusive properties —
+            from off-plan investments to luxury villas across Sheikh
+            Zayed Road and beyond.
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-5">
+          {/* BUTTONS */}
+          <div className="flex gap-4">
 
-            <button className="bg-[#c8a24c] text-black px-8 py-4 tracking-[3px] text-sm font-semibold rounded-md hover:opacity-90 transition">
-              VIEW PROPERTIES
+            <button className="bg-[#d4af37] text-black uppercase tracking-[3px] text-[11px] font-bold px-10 py-5">
+              View Properties
             </button>
 
-            <button className="border border-white/40 px-8 py-4 tracking-[3px] text-sm rounded-md hover:bg-white hover:text-black transition">
-              BOOK CONSULTATION
+            <button className="border border-white/40 uppercase tracking-[3px] text-[11px] px-10 py-5">
+              Book Consultation
             </button>
 
+          </div>
+
+          {/* SCROLL */}
+          <div className="flex items-center gap-4 mt-20">
+            <div className="w-10 h-[1px] bg-[#c8a24c]" />
+
+            <p className="uppercase tracking-[4px] text-[9px] text-gray-300">
+              Scroll to Explore
+            </p>
           </div>
 
         </section>
@@ -72,4 +81,3 @@ export default function Home() {
     </main>
   );
 }
-```
