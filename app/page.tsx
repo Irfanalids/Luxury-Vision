@@ -1,3 +1,4 @@
+```tsx
 export default function Home() {
   return (
     <main
@@ -7,43 +8,95 @@ export default function Home() {
           "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
       }}
     >
-      <div className="min-h-screen bg-black/45 flex flex-col">
-        
+      <div
+        className="min-h-screen flex flex-col"
+        style={{
+          background:
+            "linear-gradient(rgba(5,10,20,0.68), rgba(5,10,20,0.68))",
+        }}
+      >
         {/* HEADER */}
-        <header className="px-7 pt-8">
+        <header className="px-8 pt-7">
           <div className="leading-none">
-            <h1 className="text-[20px] tracking-[2px] font-semibold">
+            <h1
+              style={{
+                fontSize: "24px",
+                letterSpacing: "2px",
+                fontFamily: "Georgia, serif",
+                fontWeight: 600,
+                color: "#ffffff",
+              }}
+            >
               LUXURY{" "}
-              <span className="text-[#c8a24c]">VISION</span>
+              <span style={{ color: "#c8a24c" }}>
+                VISION
+              </span>
             </h1>
 
-            <p className="text-[8px] tracking-[5px] mt-2 text-white/80">
+            <p
+              style={{
+                fontSize: "8px",
+                letterSpacing: "5px",
+                marginTop: "10px",
+                color: "rgba(255,255,255,0.85)",
+                fontFamily: "Arial, sans-serif",
+              }}
+            >
               REAL ESTATE
             </p>
           </div>
         </header>
 
-        {/* HERO */}
+        {/* HERO SECTION */}
         <section className="flex-1 flex items-center">
-          <div className="px-14 w-full max-w-[760px] -mt-8">
-            
+          <div
+            style={{
+              paddingLeft: "64px",
+              marginTop: "-20px",
+              width: "100%",
+              maxWidth: "760px",
+            }}
+          >
             {/* TOP LABEL */}
-            <div className="border border-[#c8a24c]/50 w-fit px-6 py-3 mb-10">
-              <p className="text-[#c8a24c] text-[11px] tracking-[4px] font-semibold">
+            <div
+              style={{
+                border: "1px solid rgba(200,162,76,0.55)",
+                padding: "14px 26px",
+                width: "fit-content",
+                marginBottom: "44px",
+              }}
+            >
+              <p
+                style={{
+                  color: "#c8a24c",
+                  fontSize: "11px",
+                  letterSpacing: "4px",
+                  fontWeight: 600,
+                  fontFamily: "Arial, sans-serif",
+                }}
+              >
                 • DUBAI'S PREMIER REAL ESTATE AGENCY
               </p>
             </div>
 
-            {/* MAIN TITLE */}
+            {/* TITLE */}
             <h2
-              className="font-serif leading-[1.05] text-white"
               style={{
-                fontSize: "76px",
-                maxWidth: "650px",
+                fontSize: "58px",
+                lineHeight: "1.08",
+                maxWidth: "560px",
+                fontFamily: "Georgia, serif",
+                fontWeight: 500,
+                color: "#ffffff",
               }}
             >
               Find Your{" "}
-              <span className="italic text-[#c8a24c]">
+              <span
+                style={{
+                  color: "#c8a24c",
+                  fontStyle: "italic",
+                }}
+              >
                 Dream
               </span>
               <br />
@@ -52,7 +105,14 @@ export default function Home() {
 
             {/* DESCRIPTION */}
             <p
-              className="mt-8 text-[17px] leading-[2] text-white/90 max-w-[650px]"
+              style={{
+                marginTop: "34px",
+                fontSize: "16px",
+                lineHeight: "2",
+                color: "rgba(255,255,255,0.9)",
+                maxWidth: "610px",
+                fontFamily: "Arial, sans-serif",
+              }}
             >
               Helping you navigate Dubai's most exclusive properties — from
               off-plan investments to luxury villas across Sheikh Zayed Road
@@ -60,21 +120,69 @@ export default function Home() {
             </p>
 
             {/* BUTTONS */}
-            <div className="flex gap-5 mt-10">
-              <button className="bg-[#d8b547] text-black px-12 py-4 text-[12px] tracking-[3px] font-semibold">
+            <div
+              style={{
+                display: "flex",
+                gap: "18px",
+                marginTop: "42px",
+              }}
+            >
+              <button
+                style={{
+                  background: "#d8b547",
+                  color: "#000",
+                  padding: "16px 42px",
+                  fontSize: "12px",
+                  letterSpacing: "3px",
+                  fontWeight: 700,
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
                 VIEW PROPERTIES
               </button>
 
-              <button className="border border-white/60 px-12 py-4 text-[12px] tracking-[3px] font-semibold">
+              <button
+                style={{
+                  border: "1px solid rgba(255,255,255,0.5)",
+                  color: "#fff",
+                  background: "transparent",
+                  padding: "16px 42px",
+                  fontSize: "12px",
+                  letterSpacing: "3px",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                }}
+              >
                 BOOK CONSULTATION
               </button>
             </div>
 
             {/* BOTTOM TEXT */}
-            <div className="flex items-center gap-4 mt-16">
-              <div className="w-12 h-[1px] bg-[#c8a24c]" />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "16px",
+                marginTop: "64px",
+              }}
+            >
+              <div
+                style={{
+                  width: "44px",
+                  height: "1px",
+                  background: "#c8a24c",
+                }}
+              />
 
-              <p className="text-[10px] tracking-[4px] text-white/80">
+              <p
+                style={{
+                  fontSize: "10px",
+                  letterSpacing: "4px",
+                  color: "rgba(255,255,255,0.75)",
+                  fontFamily: "Arial, sans-serif",
+                }}
+              >
                 SCROLL TO EXPLORE
               </p>
             </div>
@@ -82,8 +190,27 @@ export default function Home() {
         </section>
 
         {/* WHATSAPP */}
-        <div className="fixed bottom-8 right-8">
-          <div className="bg-[#25D366] w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl">
+        <div
+          style={{
+            position: "fixed",
+            bottom: "30px",
+            right: "30px",
+          }}
+        >
+          <div
+            style={{
+              width: "58px",
+              height: "58px",
+              borderRadius: "999px",
+              background: "#25D366",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+              fontSize: "26px",
+              boxShadow: "0 0 30px rgba(37,211,102,0.45)",
+            }}
+          >
             ✆
           </div>
         </div>
@@ -91,3 +218,4 @@ export default function Home() {
     </main>
   );
 }
+```
