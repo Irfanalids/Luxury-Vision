@@ -12,44 +12,46 @@ export default function Home() {
             backgroundImage: `
               linear-gradient(
                 90deg,
-                rgba(7,8,15,0.58) 0%,
-                rgba(10,12,20,0.42) 38%,
-                rgba(18,20,30,0.20) 100%
+                rgba(7,8,15,0.34) 0%,
+                rgba(10,12,20,0.18) 38%,
+                rgba(18,20,30,0.06) 100%
               ),
               linear-gradient(
                 to top,
-                rgba(0,0,0,0.38),
-                rgba(0,0,0,0.10)
+                rgba(0,0,0,0.18),
+                rgba(0,0,0,0.02)
               ),
               url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')
             `,
             backgroundSize: "cover",
             backgroundPosition: "center center",
-            filter: "brightness(1.03) contrast(1.05) saturate(1.08)",
+            filter: "brightness(1.14) contrast(0.94) saturate(0.92)",
           }}
         />
 
-        {/* PURPLE/BLUE LUXURY TINT */}
+        {/* SOFT PURPLE LUXURY TINT */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(135deg, rgba(40,32,60,0.18) 0%, rgba(18,22,38,0.05) 45%, rgba(0,0,0,0) 100%)",
+              "linear-gradient(135deg, rgba(52,38,72,0.14) 0%, rgba(20,22,36,0.04) 45%, rgba(0,0,0,0) 100%)",
           }}
         />
 
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 flex min-h-screen flex-col px-8 pt-12 pb-10 md:px-16 backdrop-blur-[0.3px]">
+      <div className="relative z-10 flex min-h-screen flex-col px-8 pt-12 pb-10 md:px-16">
 
         {/* LOGO */}
         <div className="mb-[140px]">
+
           <h1
-            className="uppercase tracking-[0.22em] text-[34px] md:text-[40px]"
+            className="uppercase tracking-[0.22em]"
             style={{
               fontFamily: "Cormorant Garamond, serif",
               fontWeight: 500,
+              fontSize: "clamp(32px, 3vw, 42px)",
             }}
           >
             <span className="text-white">LUXURY </span>
@@ -57,23 +59,29 @@ export default function Home() {
           </h1>
 
           <p
-            className="mt-2 uppercase tracking-[0.45em] text-[11px] text-white/70"
+            className="mt-2 uppercase tracking-[0.45em] text-white/70"
+            style={{
+              fontSize: "11px",
+            }}
           >
             REAL ESTATE
           </p>
+
         </div>
 
-        {/* HERO CONTENT */}
+        {/* HERO */}
         <div className="max-w-[620px]">
 
           {/* LABEL */}
           <div
-            className="mb-10 inline-flex items-center border border-[#caa84c]/50 bg-[#8a7440]/18 px-8 py-5"
+            className="mb-10 inline-flex items-center border border-[#caa84c]/40 bg-[#8a7440]/16 px-8 py-5"
           >
-            <span className="mr-4 text-[#caa84c] text-[12px]">•</span>
+            <span className="mr-4 text-[#d4b24d] text-[12px]">
+              •
+            </span>
 
             <span
-              className="uppercase tracking-[0.35em] text-[#d7bb69]"
+              className="uppercase tracking-[0.34em] text-[#d7bb69]"
               style={{
                 fontSize: "12px",
                 fontWeight: 600,
@@ -85,7 +93,7 @@ export default function Home() {
 
           {/* TITLE */}
           <h2
-            className="leading-[0.95] tracking-[-0.03em] text-white"
+            className="leading-[0.94] tracking-[-0.03em]"
             style={{
               fontFamily: "Cormorant Garamond, serif",
               fontWeight: 500,
@@ -93,12 +101,19 @@ export default function Home() {
               marginBottom: "34px",
             }}
           >
-            Find Your{" "}
+            <span className="text-white">
+              Find Your{" "}
+            </span>
+
             <span className="italic text-[#caa84c]">
               Dream
             </span>
+
             <br />
-            Property in Dubai
+
+            <span className="text-white">
+              Property in Dubai
+            </span>
           </h2>
 
           {/* DESCRIPTION */}
@@ -131,9 +146,10 @@ export default function Home() {
             </button>
 
             <button
-              className="h-[74px] w-[290px] border border-white/25 uppercase tracking-[0.32em] backdrop-blur-md"
+              className="h-[74px] w-[290px] border border-white/20 uppercase tracking-[0.32em]"
               style={{
-                background: "rgba(10,10,18,0.26)",
+                background: "rgba(8,8,14,0.22)",
+                backdropFilter: "blur(10px)",
                 color: "#fff",
                 fontSize: "13px",
                 fontWeight: 700,
@@ -150,7 +166,7 @@ export default function Home() {
             <div className="h-[2px] w-[44px] bg-[#d4b24d]" />
 
             <span
-              className="uppercase text-white/80 tracking-[0.35em]"
+              className="uppercase tracking-[0.35em] text-white/75"
               style={{
                 fontSize: "11px",
               }}
@@ -164,18 +180,23 @@ export default function Home() {
 
         {/* WHATSAPP */}
         <div className="fixed bottom-8 right-8 z-50">
+
           <div
             className="flex h-[74px] w-[74px] items-center justify-center rounded-full"
             style={{
               background: "#25D366",
-              boxShadow: "0 0 35px rgba(37,211,102,0.5)",
+              boxShadow: "0 0 34px rgba(37,211,102,0.45)",
             }}
           >
-            <span className="text-[34px] text-white">☎</span>
+            <span className="text-[32px] text-white">
+              ☎
+            </span>
           </div>
+
         </div>
 
       </div>
+
     </main>
   );
 }
